@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+{% block content %}
+
+    <a class="btn btn-primary" href="{{url_for('login')}}">Login</a>
+    <a class="btn btn-danger" href="{{url_for('logout')}}">Logout</a>
+    <a class="btn btn-primary" href="{{url_for('roses')}}">Roses</a>
+    <a class="btn btn-primary" href="{{url_for('peonies')}}">Peonies</a>
+
+    <h1>Welcome to the Flower Shop!</h1>
+    <p>Discover our beautiful collection of roses and peonies.</p>
+
+{% endblock %}

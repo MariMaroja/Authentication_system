@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+{% block content %}
+
+    <h1>Login</h1>
+
+    <form method="post" action="{{ url_for('authenticate') }}">
+        <input type="hidden" name="next" value="{{ next or url_for('index') }}">
+        <p>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </p>
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </p>
+        <button type="submit">Login</button>
+    </form>
+{% endblock %}
